@@ -1,0 +1,42 @@
+<section class="vh-100" style="background-image: linear-gradient( 110.1deg,  rgba(30,2,83,1) 44.2%, rgba(198,55,160,1) 138.2% );">
+<br>
+<br>
+<br>
+<br>
+<div class="card">
+    <div class="card-header">
+        Modificar datos
+    </div>
+    <div class="card-body">
+       <form [formGroup]="formularioGames" (ngSubmit)="enviar()">
+        <div class="mb-3">
+          <label for="" class="form-label">Nombre:</label>
+          <input formControlName="nombre" type="text"
+            class="form-control" name=""  id="" aria-describedby="helpId" placeholder="NOMBRE">
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Descripcion: </label>
+          <input formControlName="descripcion" type="text"
+            class="form-control" name="" formControlName="descripcion" id="" aria-describedby="helpId" placeholder="Descripcion">
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Precio: </label>
+          <input formControlName="precio" type="number"
+            class="form-control" name="" formControlName="precio" id="" aria-describedby="helpId" placeholder="Precio">
+        </div>
+
+        <div class="mb-3">
+            <label for="" class="form-label">Imagen: </label>
+            <input formControlName="image" type="text"
+              class="form-control" name="" formControlName="image" id="" aria-describedby="helpId" placeholder="imagen">
+          </div>
+
+        <div class="btn-group" role="group">
+            <button type="submit" class="btn btn-warning">Modificar</button>
+            <button type="button" routerLink="/listar-empleado/" class="btn btn-primary">Cancelar</button>
+        </div>
+       </form>
+    </div>
+    
+</div>
+</section>

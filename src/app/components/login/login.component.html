@@ -1,0 +1,44 @@
+<!--
+<h2 class="text-center">Login</h2>
+<div class="row">
+<div class="col-md-4">
+</div>
+<div class="col-md-4 col-md-offset-5">
+<div class="jumbotron">
+<form [formGroup]="angForm" (ngSubmit)="postdata(angForm)" autocomplete="off" >
+<div class="form-group">
+<label for="email">Email</label>
+<input type="email" name="email" formControlName="email" autocomplete="off" class="form-control input-sm" placeholder="Email">
+</div>
+<div class="form-group">
+<label for="Password">Password</label>
+<input type="password" name="Password" formControlName="password" autocomplete="off" class="form-control input-sm" placeholder="Password">
+</div>
+<button type="submit" class="btn btn-success" >Login</button>
+</form>
+</div>
+</div>
+<div class="col-md-5">
+</div>
+</div>
+-->
+<section class="vh-100" style="background-image: linear-gradient( 110.1deg,  rgba(30,2,83,1) 44.2%, rgba(198,55,160,1) 138.2% );">
+  <div class="login-page">
+
+      <div class="form">
+        <form [formGroup]="angForm" (ngSubmit)="postdata(angForm)" autocomplete="off" class="login-form" >
+          <input type="email" name="email" formControlName="email" autocomplete="off" placeholder="Email" type="email" placeholder="Correo"/>
+          <div id="ValidationServerUsernameFeedbak" class="invalid-feedback">
+              email obligatorio
+          </div>
+          <input type="password" name="Password" formControlName="password" autocomplete="off" placeholder="Password" />
+          <div id="ValidationServerUsernameFeedbak" class="invalid-feedback">
+              contraseña obligatoria
+          </div>
+          <button type="submit">Login</button>
+          <p class="message">Not registered? <a routerLink="/registration">Create an account</a></p>
+        </form>
+      </div>
+    
+  </div>
+</section>

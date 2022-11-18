@@ -1,0 +1,40 @@
+<section class="vh-100" style="background-image: linear-gradient( 110.1deg,  rgba(30,2,83,1) 44.2%, rgba(198,55,160,1) 138.2% );">
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="card">
+            <div class="card-header">
+                <a href="/addgame" class="btn btn-primary">Agregar</a>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <th>#</th>
+                        <th>Juego</th>
+                        <th>Descripcion</th>
+                        <th>Precio $</th>
+                        <th>Imagen</th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let i of listajuegos; let iControl=index">
+                            <td>{{i.id}}</td>
+                            <td>{{i.nombre}}</td>
+                            <td>{{i.descripcion}}</td>
+                            <td>{{i.precio}}</td>
+                            <td>{{i.image}}</td>
+                            <td><a href="/editgame/{{i.id}}" class="btn btn-warning text-white">Editar</a></td>
+                            <td><button type="button" class="btn btn-danger" (click)="eliminar(i.id,iControl)">Eliminar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
